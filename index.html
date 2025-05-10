@@ -1,158 +1,95 @@
 <!DOCTYPE html>
 <html lang="de">
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schloss Eschenau</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Crimson+Text&display=swap" rel="stylesheet">
-    <script>
-        function openTab(tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.classList.add("active");
-        }
-
-        window.onload = function () {
-            document.querySelector(".tablink").click();
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=UnifrakturCook&display=swap" rel="stylesheet">
 </head>
 <body>
     <header style="background-image: url('Schloss.jpg'); background-size: cover; background-position: center;">
         <div class="overlay">
-            <h1>Schloss Eschenau</h1>
+            <h1 class="titel-alt">Schloss Eschenau</h1>
             <p>Ein historisches Zuhause im Herzen Frankens</p>
         </div>
     </header>
 
-    <div class="tabs">
-        <button class="tablink" onclick="openTab('geschichte')">Geschichte</button>
-        <button class="tablink" onclick="openTab('architektur')">Architektur</button>
-        <button class="tablink" onclick="openTab('bedeutung')">Bedeutung</button>
-        <button class="tablink" onclick="openTab('impressum')">Impressum</button>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#lage">Lage</a></li>
+            <li><a href="#geschichte">Geschichte</a></li>
+            <li><a href="#architektur">Architektur</a></li>
+            <li><a href="#bedeutung">Bedeutung</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <div id="geschichte" class="tabcontent">
+        <section id="lage">
+            <h2>Lage und Ursprung</h2>
+            <p>Schloss Eschenau, auch als Muffelsches Schloss bekannt, befindet sich im Ortsteil Eschenau des Marktes Eckental im Landkreis Erlangen-Höchstadt, Mittelfranken. Die Anlage entstand ursprünglich als Turmhügelburg (Motte) auf einem kreisrunden Hügel mit Wassergraben, der heute noch aus der Luft erkennbar ist.</p>
+        </section>
+
+        <section id="geschichte">
             <h2>Geschichte</h2>
 
-            <div class="info-block">
-                <h3>Lage und Ursprung</h3>
-                <p>
-                    Schloss Eschenau, auch als Muffelsches Schloss bekannt, befindet sich im Ortsteil Eschenau des Marktes Eckental im Landkreis Erlangen-Höchstadt, Mittelfranken. Die Anlage entstand ursprünglich als Turmhügelburg (Motte) auf einem kreisrunden Hügel mit Wassergraben, der heute noch aus der Luft erkennbar ist.
-                </p>
+            <h3>Frühe Geschichte und Besitzer</h3>
+            <p>Die Ursprünge der Anlage reichen bis ins frühe 11. Jahrhundert zurück. Ab den 1370er Jahren teilten sich die Nürnberger Patrizierfamilien Haller und Muffel das Lehen Eschenau, ab 1504 besaßen die Muffel die Herrschaft allein.</p>
+            <img src="Foto 1.jpg" alt="Historische Zeichnung Eschenaus">
+
+            <h3>Zerstörungen und Wiederaufbau</h3>
+            <p>Im Ersten Markgrafenkrieg 1449 wurde das Schloss zerstört. 1512 begann Jakob Muffel mit dem Wiederaufbau. Er war mit Albrecht Dürer befreundet; der Kunsthistoriker Christof Metzger sieht in Dürers „Landschaft mit Kanone“ (1518) einen Blick vom Schloss Eschenau.</p>
+
+            <div class="bildvergleich">
+                <figure>
+                    <img src="18_Jhdt.jpg" alt="Frontansicht im 18. Jahrhundert">
+                    <figcaption><strong>Damals:</strong> Frontansicht im 18. Jahrhundert</figcaption>
+                </figure>
+                <figure>
+                    <img src="Detail2.jpg" alt="Frontansicht heute">
+                    <figcaption><strong>Heute:</strong> Gleiche Perspektive im heutigen Zustand</figcaption>
+                </figure>
             </div>
 
-            <div class="info-block">
-                <h3>Frühe Geschichte und Besitzer</h3>
-                <p>
-                    Die Ursprünge der Anlage reichen bis ins frühe 11. Jahrhundert zurück. Ab den 1370er Jahren teilten sich die Nürnberger Patrizierfamilien Haller und Muffel das Lehen Eschenau, ab 1504 besaßen die Muffel die Herrschaft allein. Die Muffel prägten die Geschichte Eschenaus bis ins 18. Jahrhundert maßgeblich.
-                </p>
-                <img src="Foto 1.jpg" alt="Historische Zeichnung Eschenaus" class="bild">
-            </div>
+            <h3>Kupferstich von Eschenau</h3>
+            <img src="Kupferstich.png" alt="Kupferstich mit Blick vom Schloss">
 
-            <div class="info-block">
-                <h3>Zerstörungen und Wiederaufbau</h3>
-                <ul>
-                    <li>Im Ersten Markgrafenkrieg 1449 wurde das Schloss zerstört und blieb Jahrzehnte lang Ruine.</li>
-                    <li>1512 begann Jakob Muffel mit dem Wiederaufbau, der bis 1518 abgeschlossen wurde. Jakob Muffel war mit Albrecht Dürer befreundet; der Kunsthistoriker Christof Metzger sieht in Dürers „Landschaft mit Kanone“ (1518) einen Blick vom Schloss Eschenau.</li>
-                    <li>1553 wurde das Schloss im Zweiten Markgrafenkrieg erneut zerstört.</li>
-                    <li>1603–1611 erfolgte ein erneuter Neubau unter Hans Jakob Muffel. Aus dieser Zeit sind Baupläne und Rechnungen erhalten.</li>
-                </ul>
-                <img src="Kupferstich.png" alt="Kupferstich mit Blick vom Schloss" class="bild">
-                <img src="18_Jhdt.jpg" alt="Frontansicht Schloss 18. Jahrhundert" class="bild">
-            </div>
+            <h3>Kriege und Besitzwechsel</h3>
+            <p>Im Dreißigjährigen Krieg erlitt das Schloss erneut Schäden, die 1622 und 1631 repariert wurden. Nach dem Tod Hans Jakobs 1632 teilten seine Söhne den Besitz.</p>
+        </section>
 
-            <div class="info-block">
-                <h3>Kriege und Besitzwechsel</h3>
-                <p>
-                    Im Dreißigjährigen Krieg erlitt das Schloss erneut Schäden, die 1622 und 1631 repariert wurden. Nach dem Tod Hans Jakobs 1632 teilten seine Söhne den Besitz, wodurch erstmals ein „unteres Schloss“ außerhalb des Grabens erwähnt wurde.
-                </p>
-                <p>
-                    Im Verlauf des 18. Jahrhunderts kam es zu weiterer Besitzzersplitterung. 1791 wurde Eschenau mit den Markgraftümern Ansbach und Bayreuth preußisch. 1798 verkaufte der preußische Minister von Hardenberg die Schlossgüter an Privatleute.
-                </p>
-            </div>
-
-            <div class="info-block">
-                <h3>Nutzung im 19. Jahrhundert und baulicher Verfall</h3>
-                <p>
-                    Das Schloss diente zeitweise als Poststelle, Gaststätte und Tanzlokal. Wegen seines schlechten Zustands wurde es als „Rumpelburg“ verspottet. Nach einem Konkurs wurde es 1810 versteigert und der Rittersaal zu einem Tanzsaal umgebaut. 1819 wurde das Schloss von fünf Eschenauer Wirten gekauft und vermietet. 1835 erfolgte die Aufteilung an zwei Parteien, die das Gebäude teils selbst nutzten, teils vermieteten.
-                </p>
-                <p>
-                    Ein Brand 1843 zerstörte das Schloss weitgehend. Beim Wiederaufbau wurde auf Ecktürme, Giebel und das dritte Geschoss verzichtet. Auch der markante Turm ging verloren. Die heutige Bausubstanz ist daher stark vereinfacht und nur Fragmente des einst mächtigen Baus sind erhalten.
-                </p>
-            </div>
-        </div>
-
-        <div id="architektur" class="tabcontent" style="display:none">
+        <section id="architektur">
             <h2>Architektur und heutiger Zustand</h2>
-            <div class="info-block">
-                <h3>Heutiger Zustand</h3>
-                <p>
-                    Das Schloss war ursprünglich eine wehrhafte Anlage mit Wassergraben, Ecktürmen und mehreren Geschossen. Heute sind nur noch Teile des Bauwerks erhalten. Der Standort ist am Von-Muffel-Platz in Eschenau lokalisiert. Die Anlage ist als Baudenkmal gelistet.
-                </p>
-                <img src="Aussicht_heute.jpg" alt="Heutige Aussicht vom Schloss Eschenau" class="bild">
-            </div>
-        </div>
+            <p>Das Schloss war ursprünglich eine wehrhafte Anlage mit Wassergraben, Ecktürmen und mehreren Geschossen. Heute sind nur noch Teile des Bauwerks erhalten.</p>
+            <img src="Aussicht_heute.jpg" alt="Aussicht vom Schloss">
+            <img src="Detail1.jpg" alt="Seitenansicht heute">
+        </section>
 
-        <div id="bedeutung" class="tabcontent" style="display:none">
+        <section id="bedeutung">
             <h2>Bedeutung und Besonderheiten</h2>
+            <p>Schloss Eschenau ist ein bedeutendes Zeugnis fränkischer Adels- und Territorialgeschichte. Die Freundschaft zwischen Jakob Muffel und Albrecht Dürer verankert es sogar in der Kunstgeschichte.</p>
+            <ul>
+                <li>Mehrfach Schauplatz von Zerstörung und Wiederaufbau</li>
+                <li>Gesellschaftlicher Mittelpunkt des Ortes – u.a. als Tanzlokal</li>
+            </ul>
+        </section>
 
-            <div class="info-block">
-                <h3>Bedeutung</h3>
-                <p>
-                    Schloss Eschenau ist ein bedeutendes Zeugnis der fränkischen Adels- und Territorialgeschichte, insbesondere der Familie Muffel. Es spiegelt die wechselvolle Geschichte der Region zwischen Reichsstadt Nürnberg, Markgrafen und Preußen wider und war mehrfach Schauplatz von Kriegszerstörungen und Wiederaufbau.
-                </p>
-            </div>
-
-            <div class="info-block">
-                <h3>Besonderheiten</h3>
-                <ul>
-                    <li>Der Freundschaft zwischen Jakob Muffel und Albrecht Dürer verdankt das Schloss einen Platz in der Kunstgeschichte.</li>
-                    <li>Die Anlage war über Jahrhunderte Mittelpunkt des gesellschaftlichen Lebens in Eschenau, unter anderem als Poststelle und Tanzlokal.</li>
-                </ul>
-            </div>
-
-            <div class="info-block">
-                <h3>Zusammenfassung</h3>
-                <p>
-                    Schloss Eschenau ist ein historisch bedeutsames, heute stark verändertes Schloss, das über Jahrhunderte die Geschichte des Ortes prägte. Es steht für die wechselhafte Geschichte der Region und ist ein anschauliches Beispiel für den Wandel adeliger Herrensitze in Franken.
-                </p>
-            </div>
-        </div>
-
-        <div id="impressum" class="tabcontent" style="display:none">
+        <section id="impressum">
             <h2>Impressum</h2>
-            <p>
-                Angaben gemäß § 5 TMG:<br>
-                Martin Horn<br>
-                Von-Muffel-Platz 1<br>
-                90542 Eckental<br>
-            </p>
-            <p>
-                Kontakt:<br>
-                E-Mail: <a href="mailto:hornmartin94@googlemail.com">hornmartin94@googlemail.com</a>
-            </p>
-            <p>
-                Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV:<br>
-                Martin Horn
-            </p>
-        </div>
+            <p><strong>Angaben gemäß § 5 TMG:</strong><br>
+            Martin Horn<br>
+            Von-Muffel-Platz 1<br>
+            90542 Eckental</p>
+            <p>E-Mail: <a href="mailto:hornmartin94@googlemail.com">hornmartin94@googlemail.com</a></p>
+            <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Martin Horn</p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Schloss Eschenau – Privatbesitz in Eckental</p>
     </footer>
+
+    <a href="#top" class="back-to-top" title="Nach oben">⬆</a>
 </body>
 </html>
