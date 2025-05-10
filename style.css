@@ -52,7 +52,7 @@ html, body {
 
 .hero-title {
   font-family: 'UnifrakturCook', cursive;
-  font-size: 3.2rem; /* PC: sehr groß */
+  font-size: 3.2rem;
   color: var(--secondary);
   text-shadow: 2px 2px 6px #000a;
   margin: 0 0 10px 0;
@@ -72,16 +72,19 @@ html, body {
   box-shadow: 0 2px 8px #0002;
 }
 
-/* TABS: immer mittig, umbrechen bei Platzmangel */
+/* Tabs sticky ab ihrem oberen Rand */
 .tabs {
   display: flex;
-  justify-content: center;    /* Zentriert die Tabs horizontal */
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;            /* Tabs umbrechen, wenn sie nicht mehr in eine Zeile passen */
+  flex-wrap: wrap;
   background: var(--primary);
   box-shadow: var(--shadow);
   padding: 0 6px;
   gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .tabs::-webkit-scrollbar { display: none; }
 

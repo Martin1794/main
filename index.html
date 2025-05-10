@@ -17,14 +17,12 @@
       <h2 class="hero-subtitle">Ein historisches Zuhause im Herzen Frankens</h2>
     </div>
   </header>
-
   <nav class="tabs" role="tablist">
     <button class="tab active" role="tab" aria-selected="true" aria-controls="geschichte" id="tab-geschichte">Geschichte</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="architektur" id="tab-architektur">Architektur & Zustand</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="bedeutung" id="tab-bedeutung">Bedeutung & Besonderheiten</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="impressum" id="tab-impressum">Impressum</button>
   </nav>
-
   <main>
     <!-- Geschichte -->
     <section id="geschichte" class="tab-content active" role="tabpanel" aria-labelledby="tab-geschichte">
@@ -57,7 +55,7 @@
         </ul>
       </p>
       <div class="img-full">
-        <img src="Landschaft_mit_Kanone.JPG" alt="Albrecht Dürer: Landschaft mit Kanone (1518)" class="zoomable">
+        <img src="Landschaft_mit_Kanone.jpg" alt="Albrecht Dürer: Landschaft mit Kanone (1518)" class="zoomable">
         <span class="caption">
           Albrecht Dürer: <em>Landschaft mit Kanone</em> (1518).<br>
           Die Radierung zeigt eine seitenverkehrte Ansicht von Eschenau und entstand anlässlich des Wiederaufbaus des Schlosses durch Dürers Freund Jakob Muffel.
@@ -165,7 +163,6 @@
         document.getElementById('lightbox-img').src = '';
       }
     };
-    // ESC zum Schließen
     document.addEventListener('keydown', function(e) {
       if (e.key === "Escape") {
         document.getElementById('lightbox').classList.remove('active');
