@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'UnifrakturCook';
+  src: url('fonts/UnifrakturCook.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 :root {
   --primary: #223366;
   --secondary: #e6d3a3;
@@ -152,17 +161,41 @@ ul {
 .img-right img, .img-left img, .img-full img {
   max-width: 340px;
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px #0001;
-  background: #ddd;
-  transition: box-shadow 0.2s;
+  background: #f4f1e8;
+  padding: 6px;
+  border: 1px solid #c9c1a5;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.img-right, .img-left {
+  max-width: 340px;
 }
 .img-right img:hover, .img-left img:hover, .img-full img:hover {
-  box-shadow: 0 0 0 4px var(--accent), 0 2px 8px #0002;
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
-.img-right { float: right; margin-left: 24px; }
-.img-left { float: left; align-items: flex-start; margin-right: 24px;}
-.img-full { align-items: center; float: none; }
+.img-right {
+  float: right;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.img-left {
+  float: left;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.img-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .caption {
   font-size: 0.95rem;
   color: var(--primary);
@@ -248,11 +281,15 @@ ul {
     font-size: 0.95rem;
     padding: 2px 8px;
   }
-  main {
-    margin: 10px 0;
-    padding: 0 4px;
-    border-radius: 0;
-  }
+main {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: auto;
+}
   .tabs {
     flex-wrap: wrap;
     justify-content: center;
@@ -263,4 +300,10 @@ ul {
     font-size: 1rem;
   }
   .lightbox-close { top: 14px; right: 16px; font-size: 2rem; }
+}
+
+.tab-content::after {
+  content: "";
+  display: block;
+  clear: both;
 }
